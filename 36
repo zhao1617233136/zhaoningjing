@@ -19,7 +19,7 @@ except urllib2.URLError, e:
         print e.code
     if hasattr(e,"reason"):
         print e.reason
-'''
+
 content_pattern = re.compile('<p class="answer_text">(.*?)</p>', re.S)
 content_list = re.findall(content_pattern, html)
 for item in content_list:
@@ -32,8 +32,7 @@ content_list = re.findall(content_pattern, html)
 for item in content_list:
     print item
 
-"
-'''
+
 content_pattern = re.compile('<p class="answer_user">.*?>(.*?)</a>', re.S)
 content_list = re.findall(content_pattern, html)
 for item in content_list:
